@@ -1,0 +1,15 @@
+import numpy as np
+def a(X):
+    if hasattr(X, "__iter__"):
+        return np.array([a(x) for x in X])
+    return 1
+
+def f(X):
+    if hasattr(X, "__iter__"):
+        return np.array([f(x) for x in X])
+    return 1
+
+def g(X):
+    if hasattr(X, "__iter__"):
+        return np.array([g(x) for x in X])
+    return 0
